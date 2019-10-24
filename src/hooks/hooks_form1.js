@@ -10,8 +10,7 @@ const HooksForm1 = () => {
   const [valueChange, setValueChange] = useState('')
   const [valueSubmit, setValueSubmit] = useState('')
 
-  const [state, dispatch] = useReducer(FormReducer.FormReducer,
-                                       FormReducer.initialState)
+  const [state, dispatch] = useReducer(FormReducer.FormReducer, FormReducer.initialState)
 
 
   const handleuseStateChange = (event) => (

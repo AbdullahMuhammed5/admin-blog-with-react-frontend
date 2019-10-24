@@ -17,9 +17,7 @@ const ContextState = () => {
     /*
         Plain Reducer
     */
-    const [stateReducer1, dispatchReducer1] = useReducer(Reducer1.Reducer1,
-                                                         Reducer1.initialState)
-
+    const [stateReducer1, dispatchReducer1] = useReducer(Reducer1.Reducer1, Reducer1.initialState)
 
     const handleDispatchTrue = () => {
       //    dispatchReducer1(type: "SUCCESS")
@@ -36,8 +34,7 @@ const ContextState = () => {
     /*
       Auth Reducer
     */
-    const [stateAuthReducer, dispatchAuthReducer] =                      useReducer(AuthReducer.AuthReducer,
-                                                           AuthReducer.initialState)
+    const [stateAuthReducer, dispatchAuthReducer] = useReducer(AuthReducer.AuthReducer, AuthReducer.initialState)
 
 
     const handleLogin = () => {
@@ -57,13 +54,11 @@ const ContextState = () => {
     }
 
 
-
     /*
       Form Reducer
     */
 
-        const [stateFormReducer, dispatchFormReducer] = useReducer(FormReducer.FormReducer, FormReducer.initialState)
-
+    const [stateFormReducer, dispatchFormReducer] = useReducer(FormReducer.FormReducer, FormReducer.initialState)
 
     const handleFormChange = (event) => {
       dispatchFormReducer(ACTIONS.user_input_change(event.target.value))
@@ -80,7 +75,6 @@ const ContextState = () => {
         auth.handleAuth()
       }
     }
-
 
 
     return(
