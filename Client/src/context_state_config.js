@@ -76,7 +76,8 @@ const ContextState = () => {
 
     const handleFormSubmit = (event) => {
       event.preventDefault();
-      event.persist();             dispatchFormReducer(ACTIONS.user_input_submit(event.target.useContext.value))
+      event.persist();             
+      dispatchFormReducer(ACTIONS.user_input_submit(event.target.useContext.value))
     };
 
     //Handle authentication from callback
@@ -91,8 +92,7 @@ const ContextState = () => {
       Posts Reducer
     */
 
-    const [statePosts, dispatchPosts] =  useReducer(PostsReducer.PostsReducer,                                                         PostsReducer.initialState)
-
+    const [statePosts, dispatchPosts] =  useReducer(PostsReducer.PostsReducer, PostsReducer.initialState)
 
     const handleSetPosts = (posts) => {
       dispatchPosts(ACTIONS.set_db_posts(posts) )
